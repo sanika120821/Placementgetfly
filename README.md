@@ -12,6 +12,7 @@ The Placement website is a platform designed to facilitate the placement process
 
 # Installation
 To run this project locally:
+
 1.Clone the repository:
 git clone https://github.com/yourusername/placement-website.git
 
