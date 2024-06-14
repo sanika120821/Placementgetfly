@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.notification-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-page h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #85662b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.notifications {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.notification {
+  background: #f0ebe1;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.notification:hover {
+  transform: scale(1.02);
+}
+
+.notification h2 {
+  color: #85662b;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.notification p {
+  color: #8b7f75;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.notification-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.notification a:hover {
+  color: #0056b3;
+}
+
+.notification .apply-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.notification .apply-button:hover {
+  background: #0056b3;
+}
+
+.notification .apply-button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
