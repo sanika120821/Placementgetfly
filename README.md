@@ -5,7 +5,9 @@ The Placement website is a platform designed to facilitate the placement process
 
 # Features
 -FAQ Section: A curated list of frequently asked questions to help students find answers quickly.
+
 -Raise a Question: A feature allowing students to submit their own questions if they can't find answers in the FAQ section.
+
 -Latest Company Updates: A notification system displaying the latest updates from companies, including company names, relevant documents, and apply links.
 
 # Installation
