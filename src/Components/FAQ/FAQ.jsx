@@ -5,8 +5,7 @@ const FAQ = () => {
   const [selected, setSelected] = useState(null);
   const [newQuestion, setNewQuestion] = useState('');
   const [faqData, setFaqData] = useState(data);
-  const [isInputVisible, setIsInputVisible] = useState(false); // State to manage input visibility
-
+  const [isInputVisible, setIsInputVisible] = useState(false); 
   const toggle = (i) => {
     if (selected === i) {
       setSelected(null);
@@ -37,39 +36,51 @@ const FAQ = () => {
   };
 
   return (
-    <div className='wrapper'>
-      <div className='page-title'>
-        Frequently Asked Questions
-      </div>
-      <div className='accordion'>
-        {faqData.map((item, i) => (
-          <div className='item' key={i} onClick={() => toggle(i)}>
-            <div className='title'>
-              <h2>{item.question}</h2>
-              <span className={selected === i ? 'active' : ''}>{selected === i ? '-' : '+'}</span>
-            </div>
-            <div className={selected === i ? 'content show' : 'content'}>
-              {item.answer}
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      {!isInputVisible && (
-        <button className="add-question-button" onClick={toggleInput}>Raise a Question</button>
-      )}
-      {isInputVisible && (
-        <div className="add-question-form">
-          <input
-            type="text"
-            placeholder="Enter your question"
-            value={newQuestion}
-            onChange={handleInputChange}
-          />
-          <button onClick={addQuestion}>Add Question</button>
-          <button onClick={toggleInput}>Cancel</button>
+    <div className='faq-wrapper'>
+      <div className='faq-container'>
+        <div className='page-title'>
+          Frequently Asked Questions
         </div>
-      )}
+        <div className='accordion'>
+          {faqData.map((item, i) => (
+            <div className='faq-item' key={i} onClick={() => toggle(i)}>
+              <div className='faq-title'>
+                <h2>{item.question}</h2>
+                <span className={selected === i ? 'active' : ''}>{selected === i ? '-' : '+'}</span>
+              </div>
+              <div className={selected === i ? 'faq-content show' : 'faq-content'}>
+                {item.answer}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {!isInputVisible && (
+          <button className="add-question-button" onClick={toggleInput}>Ask a Question</button>
+        )}
+        {isInputVisible && (
+          <div className="add-question-form">
+            <input
+              type="text"
+              placeholder="Enter your question"
+              value={newQuestion}
+              onChange={handleInputChange}
+            />
+            <button onClick={addQuestion}>Add Question</button>
+            <button onClick={toggleInput}>Cancel</button>
+          </div>
+        )}
+      </div>
+
+      <div className='additional-content'>
+        <h3>Additional Information</h3>
+        <p>
+          Have more questions? Contact our support team for assistance. We're here to help you with any queries related to placements, job applications, and more.
+        </p>
+        <p>
+          Explore our resources section to find tips on preparing for technical interviews, improving your resume, and maximizing your job search efforts.
+        </p>
+      </div>
     </div>
   );
 };

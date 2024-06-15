@@ -7,8 +7,7 @@
 .container{
   width:100vw;
   min-height: 100vh;
-  background: #ced8ff;
-  background: url('./assets/bgimg.jpeg');
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
